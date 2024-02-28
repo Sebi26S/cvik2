@@ -16,6 +16,14 @@
           </a>
         </div>
       <nav class="main-nav">
+      <?php
+      $pages = array("Domov" => "index.php", "Portfolio" => "portfolio.php", "QNA" => "qna.php", "kontakt" => "kontakt.php");
+      foreach ($pages as $page_name => $page_url)
+      {
+        echo("<li><a href=".$page_url">'.$page_name.'</a></li>");
+      }
+      /?>
+
         <ul class="main-menu" id="main-menu">
             <li><a href="index.html">Domov</a></li>
             <li><a href="portfolio.html">Portfólio</a></li>
