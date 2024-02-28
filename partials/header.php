@@ -11,25 +11,23 @@
 <body>
     <header class="container main-header">
         <div>
-          <a href="index.html">
+          <a href="index.php">
             <img src="img/logo.png" height="40">
           </a>
         </div>
       <nav class="main-nav">
       <?php
-      $pages = array("Domov" => "index.php", "Portfolio" => "portfolio.php", "QNA" => "qna.php", "kontakt" => "kontakt.php");
-      foreach ($pages as $page_name => $page_url)
-      {
-        echo("<li><a href=".$page_url">".$page_name."</a></li>");
+      
+      $pages = array('Domov' => 'index.php',
+       'Portfolio' => 'portfolio.php',
+        'Q%A' => 'qna.php', 
+        'Kontakt' => 'kontakt.php');
+      foreach($pages as $page_name => $page_url){
+        echo ('<li><a href="'.$page_url.'">'.$page_name.' </a></li>');
       }
-      /?>
+      ?>
 
-        <ul class="main-menu" id="main-menu">
-            <li><a href="index.html">Domov</a></li>
-            <li><a href="portfolio.html">Portfólio</a></li>
-            <li><a href="qna.html">Q&A</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
+        
         <a class="hamburger" id="hamburger">
             <i class="fa fa-bars"></i>
         </a>
